@@ -1,0 +1,190 @@
+ .formall  {
+		width:90%;
+	    margin:1em auto;
+	    padding:0 1em;
+    }
+	/* fieldset */
+	.formall fieldset,
+	.formall .fieldset {
+		padding:.8em;
+		margin:1em 0;
+	}
+	.formall fieldset hr {
+		height:1px;
+		border:none;
+		border-bottom:1px #666 solid;
+		margin:.5em -0.8em;
+	} * html .formall fieldset hr {
+		margin:0em -0.8em; /*! IE HR height doesn't work !*/
+	}
+	
+	/* text input width */
+	.formall input,
+	.formall textarea,
+	.formall select {
+		display:block;
+	}
+	.formall input[type="submit"],
+	.formall input[type="image"],
+	.formall input[type="reset"] {
+		display:inline;
+	} .formall .button  {
+		display:inline;
+	}
+	
+	/* Default with of text input fields */
+	.formall input.text,
+	.formall textarea {
+		width:99%;
+	} .formall input[type="text"],
+	.formall input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="reset"]):not([type="image"])
+	{ /*! So IE won't die over the selector !*/
+		width:99%;
+	}
+	
+	.formall input.widthauto {
+		width:auto !important;
+	}
+
+	/* Error messages */
+	.formall *[aria-invalid="true"] {
+		border:solid 1px #F00;
+	}.formall .invalid 
+	{ /*! So IE won't die over the selector !*/
+		border:solid 1px #F00;
+	}
+	.formall dd.alert,
+	.formall div.alert {
+		border:none;
+		color:#900;
+		text-align:center;
+		font-weight:bold;
+	}.formall dd[role="alert"],
+	.formall div[role="alert"]
+	{ /*! So IE won't die over the selector !*/
+		border:none;
+		color:#900;
+		text-align:center;
+		font-weight:bold;
+	}
+	
+	/* label underline */
+	.formall label[for] {
+		border-bottom:dotted 1px #999;
+	}
+	.formall label[for]:hover {
+		border-bottom:dashed 1px #000;
+	}
+	
+	/* active color */
+	.formall input[type="text"]:focus,
+	.formall input:not([type="checkbox"]):not([type="radio"]):not([type="password"]):not([type="submit"]):not([type="reset"]):not([type="image"]):focus,
+	.formall input[type="file"]:focus,
+	.formall textarea:focus {
+		background:#FFC;
+	}
+	
+	/* tip */
+	.formall div.tip,
+	.formall dd.tip {
+		padding-left:1em;
+		font-size:85%;
+	}.formall div[role="tooltip"],
+	.formall dd[role="tooltip"] {
+		padding-left:1em;
+		font-size:85%;
+	}
+	
+	/* required field */
+	.formall .req {
+		color:#B00;
+	} .formall [title="required"] {
+		color:#B00;
+	}
+	
+	/* Align with 2nd column of dl list */
+	.formall .indent {
+		padding-left:7.4em; /*( Form.column1.Width + Form.column1.Space ) )*/
+	}
+	
+	/* 2-column nested fieldset using legend */
+	.formall fieldset fieldset {
+		padding:0;
+		margin:0 0 0 7.4em;/*( #, #, #, Form.column1.Space + Form.column1.Width )*/		
+		border:none;
+		position:relative; }
+		
+		.formall fieldset fieldset legend {
+			text-indent:1em;
+		}
+		.formall fieldset fieldset legend label {
+			display:block;
+			position:absolute;
+			top:1px;
+			left:-7.4em;	/*( 0 - Form.column1.Space + Form.column1.Width )*/		
+			width:9em;
+			text-align:right;
+		}
+	
+/* common formlist */
+.formlist {
+	margin:0;
+	padding:0; }
+	
+	/* unset defailt display:block for dl & ul */
+	.formlist input {
+		display:inline;
+	}
+	
+	/* 2-column form lists are dl's */
+	dl.formlist { }
+		
+		/* left colmun width  */
+		dl.formlist {
+			padding-left:6em;	/*( Form.column1.Width )*/
+		} dl.formlist dt {
+			margin-left:-6em;	/*( 0 - Form.column1.Width )*/
+			width:6em;			/*( Form.column1.Width )*/
+			position:relative;
+			margin-top:.3em;
+			margin-bottom:-1.4em;
+			text-align:right; }
+			
+			dl.formlist dt .req,
+			.formall legend label .req 
+			{
+				position:absolute;
+				right:-1em;
+			} dl.formlist dt [title="required"],
+			.formall legend label [title="required"]
+			{
+				position:absolute;
+				right:-1em;
+			}
+		/* space between dt and dd */
+		dl.formlist dd {
+			margin-left:1.4em; /*( Form.column1.Space )*/
+		}
+
+	/* single-column form lists are ul's */
+	ul.formlist {
+		list-style:none; }
+		
+		/* add some space */
+		ul.formlist li {
+			padding:.1em 0;
+		}
+		/* left spacing from input element */
+		ul.formlist label,
+		ul.formlist .label {
+			margin-left:.5em;
+		}
+		/* override default 100% width */
+		ul.formlist input.text,
+		ul.formlist textarea {
+			width:auto !important;
+		} ul.formlist input[type="text"],
+		ul.formlist input:not([type="checkbox"]):not([type="radio"]):not([type="password"])
+		{ /*! So IE won't die over the selector !*/
+			width:auto !important;
+		}

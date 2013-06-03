@@ -1,0 +1,22 @@
+body {
+	margin:0;
+	padding:0 .3em;
+	font-family:"Arial","Nimbus Roman No9 L","Bitstream Vera Serif",serif;
+    font-size:0.75em; /*{ font-size: 12px }*/
+}
+a img {
+    border:none
+}
+.hide {
+	display:none;
+}
+.off_screen {
+	position:absolute;
+	top:-9999em;
+}
+.float-right {
+    float:right;
+}
+.float-left {
+    float:left;
+}
